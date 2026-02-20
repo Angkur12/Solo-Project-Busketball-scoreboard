@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Basketball Scoreboard</title>
+</head>
+<body>
+
+  <div class="arena-glow"></div>
+
+  <main class="container">
+
+    <header class="scoreboard-header">
+      <div class="court-label">LIVE GAME</div>
+      <div class="pulse-dot"></div>
+    </header>
+
+    <div class="teams-wrapper">
+
+      <!-- HOME TEAM -->
+      <div class="team home-team">
+        <div class="team-badge">H</div>
+        <h3 class="team-name">HOME</h3>
+        <div class="score-display">
+          <span id="home-score">00</span>
+        </div>
+        <div class="point-buttons">
+          <button onclick="addPoints('home', 1)" class="btn-point">+1</button>
+          <button onclick="addPoints('home', 2)" class="btn-point">+2</button>
+          <button onclick="addPoints('home', 3)" class="btn-point">+3</button>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="vs-divider">
+        <span class="vs-text">VS</span>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- GUEST TEAM -->
+      <div class="team guest-team">
+        <div class="team-badge">G</div>
+        <h3 class="team-name">GUEST</h3>
+        <div class="score-display">
+          <span id="guest-score">00</span>
+        </div>
+        <div class="point-buttons">
+          <button onclick="addPoints('guest', 1)" class="btn-point">+1</button>
+          <button onclick="addPoints('guest', 2)" class="btn-point">+2</button>
+          <button onclick="addPoints('guest', 3)" class="btn-point">+3</button>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="scoreboard-footer">
+      <button class="reset-btn" onclick="resetScores()">
+        <span class="reset-icon">↺</span>
+        RESET
+      </button>
+    </footer>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
