@@ -385,8 +385,8 @@ body::before {
     width: min(270px, 90vw);
     padding: 28px 28px 24px;
   }
-
+/* modification 64 to 24 */
   .score-display span {
-    font-size: 64px;
+    font-size: 24px;
   }
 }
